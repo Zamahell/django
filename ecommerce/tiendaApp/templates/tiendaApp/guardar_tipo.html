@@ -1,0 +1,12 @@
+{% load static %} 
+{% block tituloPestana %} Registrar Tipo de Usuario {% endblock %}
+{% block tituloPagina %} Tipo de Usuario {% endblock %}
+
+{% block contenido %}
+<form action="{% url 'guardar_tipo' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar</button>
+</form>
+
+{% endblock %}
